@@ -13,7 +13,7 @@ const ChatForm = () => {
     setResult(null);
 
     try {
-      const response = await fetch("http://localhost:3001/api/evaluate", {
+      const response = await fetch("https://relevance-checker.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
