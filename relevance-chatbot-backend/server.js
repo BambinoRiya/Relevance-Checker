@@ -10,7 +10,7 @@ const { AzureOpenAI } = require("openai");
 
 const app = express();
 app.use(cors({
-  origin: "https://relevance-checker-2psfnirml-kinlabels-projects.vercel.app/" 
+  origin: true 
 }));
 
 app.use(express.json());
