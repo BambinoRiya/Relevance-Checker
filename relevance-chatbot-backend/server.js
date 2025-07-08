@@ -183,9 +183,12 @@ app.post("/api/evaluate", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log("✅ Backend running at http://localhost:3000");
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+  console.log(`✅ Backend running on port ${PORT}`);
 });
+
 
 
 
