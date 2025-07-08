@@ -12,6 +12,8 @@ const ChatForm = () => {
     setLoading(true);
     setResult(null);
 
+    
+
     try {
       const response = await fetch("https://relevance-checker.onrender.com/api/evaluate", {
         method: "POST",
@@ -20,6 +22,7 @@ const ChatForm = () => {
         },
         body: JSON.stringify({ title, abstract }),
       });
+
 
       const data = await response.json();
       setResult(data);
