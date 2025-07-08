@@ -59,9 +59,9 @@ function getTransferabilityVerdictWeighted(json) {
 
 
 // Initialize OpenAI with v4 syntax
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// const openai = new OpenAI({
+//   apiKey: process.env.OPENAI_API_KEY,
+// });
 
 // API endpoint to evaluate research relevance
 app.post("/api/evaluate", async (req, res) => {
