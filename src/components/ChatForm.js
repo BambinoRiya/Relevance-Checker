@@ -20,8 +20,15 @@ const ChatForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, abstract }),
+        body: JSON.stringify({ title, abstract,year }),
       });
+
+      
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Backend error:", errorText);
+      throw new Error("Failed to fetch");
+    }
 
 
       const data = await response.json();
